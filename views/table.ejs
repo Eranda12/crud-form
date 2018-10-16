@@ -1,0 +1,56 @@
+<DOCTYPE! html>
+<html>
+<head>
+    <title>Shto kontraten e re</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container col-sm-12 ">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th scope="col">Nr.Rendor</th>
+                <th scope="col">Lloji</th>
+                <th scope="col">Aktiviteti</th>
+                <th scope="col">Data e inicimit</th>
+                <th scope="col">Data e publikimit</th>
+                <th scope="col">Data e nenshkrimit</th>
+                <th scope="col">Afatet per implementim</th>
+                <th scope="col">Data e permbylljes</th>
+                <th scope="col">Cmimi i kontrates</th>
+                <th scope="col">Cmimi total</th>
+                <th scope="col">Emri</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+            </tr>
+            </thead>
+            <tbody>
+                <% docs.map(function(doc) { %>
+                    <tr>
+                    <th scope="row"><%= doc.nr_rendor %></th>
+                    <td><%= doc.lloji_prokurimit %></td>
+                    <td><%= doc.aktiviteti_prokurimit %></td>
+                    <td><%= doc.data_inicimit %></td>
+                    <td><%= doc.data_publikimit %></td>
+                    <td><%= doc.data_nenshkrimit %></td>
+                    <td><%= doc.afatet_implementim %> to <%= doc.data_permbylljes %></td>
+                    <td><%= doc.data_pranimit_perkohshem %></td>
+                    <td><%= doc.cmimi_kontrates %></td>
+                    <td><%= doc.cmimi_total %></td>
+                    <td><%= doc.first_last_name %></td>
+                    <td><button type="button" class="btn btn-default btn-lg">
+  <span class="glyphicon glyphicon-edit"></span>     <a href="/contracts/edit/<%= doc._id %>">Edit</a>
+
+</button></td>
+                    <td><button type="button" class="btn btn-default btn-lg">
+                        <span class="glyphicon glyphicon-remove"></span> <a href="/contracts/delete/<%= doc._id %>">Delete</a>
+</button></td>
+                 </tr>
+                <% }) %>
+        
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

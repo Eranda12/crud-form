@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kontrata</title>
+
+        <script type="text/javascript" src="main.js"></script>
+    
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    
+</head>
+    
+    <body>
+		<div class="container">
+    <form action="/contracts/update/<%= doc._id %>" method="post">
+        <h1 class="col-sm-12" style="color: #2e6da4"><b>Edito Kontraten</b> </h1>
+        <a class="col-sm-12" href="/contracts/table">Shiko te gjitha kontratat</a>
+        <h2 class="col-sm-12">Prokurimi:</h2>
+        <div class="form-group">
+            <span class="col-sm-6 form-group">
+                <label>Nr.rendor i prokurimit</label>
+                <input type="number" name="nr_rendor" value="<%= doc.nr_rendor %>" class="form-control" placeholder="Nr.rendor i prokurimit" required>
+            </span>
+            <span class="col-sm-6 form-group">
+                <label>Lloji i prokurimit</label>
+                <input type="text" name="lloji_prokurimit" value="<%= doc.lloji_prokurimit %>" class="form-control" placeholder="LLoji i prokurimit" required>
+            </span>
+        </div>
+        <div class="form-group">
+            <span class="col-sm-12 form-group">
+                <label>Aktiviteti i prokurimit</label>
+                <input type="text" name="aktiviteti_prokurimit" value="<%= doc.aktiviteti_prokurimit %>" class="form-control" placeholder="Aktiviteti i prokurimit" required>
+            </span>
+        </div>
+        <h2 class="col-sm-12">Datat:</h2>
+        <div class="form-group">
+            <span class="col-sm-6 form-group">
+                <label>Data e inicimit te aktivitetit te prokurimit</label>
+                <input type="date" name="data_inicimit" value="<%= doc.data_inicimit %>" class="form-control" required>
+            </span>
+            <span class="col-sm-6 form-group">
+                <label>Data e publikimit te shpalljes</label>
+                <input type="date" name="data_publikimit" value="<%= doc.data_publikimit %>" class="form-control" required>
+            </span>
+        </div>
+        <div class="form-group">
+            <span class="col-sm-12 form-group">
+                <label>Data e nenshkrimit te kontrates</label>
+                <input type="date" name="data_nenshkrimit" value="<%= doc.data_nenshkrimit %>" class="form-control" required>
+            </span>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-12">Afatet per implementimin e kontrates</label>
+            <span class="col-sm-6 form-group">
+                <input type="date" name="afatet_implementim" value="<%= doc.afatet_implementim %>" class="form-control" required>
+            </span>
+            <span class="col-sm-6 form-group">
+                <input type="date" name="data_permbylljes" value="<%= doc.data_permbylljes %>" class="form-control" required>
+            </span>
+        </div>
+        <div class="form-group">
+            <span class="col-sm-12 form-group">
+                <label>Datat e permbylljes se kontrates(data e pranimit te perkohshem/preliminar) </label>
+                <input type="date" name="data_pranimit_perkohshem" value="<%= doc.data_pranimit_perkohshem %>" class="form-control" required>
+            </span>
+        </div>
+        <h2 class="col-sm-12">Cmimi dhe te dhenat tjera:</h2>
+        <div class="form-group">
+            <span class="col-sm-6 form-group">
+                <label>Cmimi i kontrates(duke perfshire te gjitha taksat)</label>
+                <input type="number" name="cmimi_kontrates" value="<%= doc.cmimi_kontrates %>" class="form-control" placeholder="Cmimi i kontrates" required>
+            </span>
+            <span class="col-sm-6 form-group">
+                <label>Cmimi total i paguar per kontraten</label>
+                <input type="number" name="cmimi_total" value="<%= doc.cmimi_total %>" class="form-control" placeholder="Cmimi total" required>
+            </span>
+        </div>
+        <div class="form-group">
+            <span class="col-sm-12 form-group">
+                <label>Emri i te cilit i eshte dhene kontrata</label>
+                <input type="text" name="first_last_name" value="<%= doc.first_last_name %>" class="form-control" placeholder="Emri dhe mbiemri" required>
+            </span>
+        </div>
+
+        <div class="form-group">
+            <span class="col-sm-6 form-group">
+                <input type="submit" value="Dergo" class="form-control btn btn-primary">
+            </span>
+            <span class="col-sm-6 form-group">
+                <input type="reset" value="Fshij" class="form-control btn btn-danger">
+            </span>
+        </div>
+    </form>
+</div>
+	</body>
+	
+</html>
