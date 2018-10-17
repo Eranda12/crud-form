@@ -1,5 +1,5 @@
 # crud-form
-Simple CRUD of form implemented using NodeJs, React and MongoDb
+Simple CRUD of form implemented using NodeJs and MongoDb
 
 ## How to install in local environment
 In terminal write the following commands:
