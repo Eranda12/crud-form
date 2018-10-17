@@ -7,13 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-  "type": "git",
-  "url": "https://github.com/Eranda12/crud-form.git"
- },
+    "type": "git",
+    "url": "https://github.com/Eranda12/crud-form.git"
+  },
   "author": "Eranda Gashi",
   "license": "ISC",
   "dependencies": {
-     "body-parser": "^1.18.3",
+    "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "mongodb": "^2.2.36"
