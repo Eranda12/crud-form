@@ -9,6 +9,7 @@ In terminal write the following commands:
 * cd crud-form
 * npm install
 * node server.js
+.
 
 
 
